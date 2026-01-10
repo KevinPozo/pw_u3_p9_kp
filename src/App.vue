@@ -2,13 +2,22 @@
   <nav>
     <router-link to="/">Home</router-link> |
     <router-link to="/about">About</router-link> |
-    <router-link to="/hola">Hola Mundo</router-link> |
+    <router-link :to="`/hola/${idEstudiante}`">Hola Mundo</router-link> |
     <router-link to="/pregunta">Pregunta</router-link> |
     <router-link to="/pokemon">Pokemon</router-link>
   </nav>
+  <input v-model="idEstudiante" type="text">
   <router-view />
 </template>
-
+<script>
+export default {
+  data() {
+    return {
+      idEstudiante: 12
+    }
+  },
+}
+</script>
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;

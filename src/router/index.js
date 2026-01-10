@@ -20,7 +20,7 @@ const routes = [
       import("../views/PreguntaView.vue"),
   },
   {
-    path: "/hola",
+    path: "/hola/:id",
     name: "hola-mundo",
     component: HolaMundo,
   },
